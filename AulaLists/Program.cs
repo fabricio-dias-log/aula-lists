@@ -10,6 +10,8 @@ class Program
         list.Add("Fabricio");
         list.Add("João");
         list.Add("Linux");
+        list.Add("Marcos");
+        list.Add("Joana");
         list.Add("Windows");
         
         list.Insert(2, "Ana"); // insere o item de acordo com a posição 
@@ -37,6 +39,14 @@ class Program
         
         int pos2 = list.FindLastIndex(x => x[0] == 'A'); //retorna ultimo indice/posição do item de acordo com a lógica
         Console.WriteLine($"Última posição com a letra 'A': {pos2}");
+
+        List<string> resultList = list.FindAll(x => x.Length == 5); // retorna todos os resultados de acordo com a lógica
+        Console.WriteLine("------------------------------");
+        Console.WriteLine($"Lista de nomes com 5 letras:");
+        foreach (var obj in resultList)
+        {
+            Console.WriteLine(obj);
+        }
     }
 
     static bool FirstA(string list)
