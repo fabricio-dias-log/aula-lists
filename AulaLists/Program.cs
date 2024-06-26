@@ -55,6 +55,14 @@ class Program
         {
             Console.WriteLine(obj);
         }
+
+        list.RemoveAll(x => x[0] == 'M'); // remove todos os resultados de acordo com a lógica
+        Console.WriteLine("------------------------------");
+        Console.WriteLine("Lista atualizada");
+        foreach (var obj in list)
+        {
+            Console.WriteLine(obj);
+        }
     }
 
     static bool FirstA(string list)
