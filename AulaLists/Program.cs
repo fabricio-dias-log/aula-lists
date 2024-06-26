@@ -71,6 +71,14 @@ class Program
         {
             Console.WriteLine(obj);
         }
+        
+        list.RemoveRange(2, 2); // remove de acordo com o indice e contagem a partir do indice passado como parametro
+        Console.WriteLine("------------------------------");
+        Console.WriteLine("Lista atualizada (2 itens a partir indice 2 removido)");
+        foreach (var obj in list)
+        {
+            Console.WriteLine(obj);
+        }
     }
 
     static bool FirstA(string list)
