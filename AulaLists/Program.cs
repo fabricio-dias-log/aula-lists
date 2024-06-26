@@ -42,8 +42,16 @@ class Program
 
         List<string> resultList = list.FindAll(x => x.Length == 5); // retorna todos os resultados de acordo com a lógica
         Console.WriteLine("------------------------------");
-        Console.WriteLine($"Lista de nomes com 5 letras:");
+        Console.WriteLine("Lista de nomes com 5 letras:");
         foreach (var obj in resultList)
+        {
+            Console.WriteLine(obj);
+        }
+        
+        Console.WriteLine("------------------------------");
+        Console.WriteLine("Lista atualizada");
+        list.Remove("Alex");
+        foreach (var obj in list)
         {
             Console.WriteLine(obj);
         }
