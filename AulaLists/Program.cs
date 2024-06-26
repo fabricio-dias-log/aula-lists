@@ -17,5 +17,7 @@ class Program
         {
             Console.WriteLine(obj);
         }
+
+        Console.WriteLine($"list count: {list.Count}");
     }
 }
