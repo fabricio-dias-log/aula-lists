@@ -6,6 +6,7 @@ class Program
     {
         List<string> list = new List<string>();
         
+        list.Add("Alex");
         list.Add("Fabricio");
         list.Add("João");
         list.Add("Linux");
@@ -26,10 +27,16 @@ class Program
         
         //expressão lâmbida
         string s2 = list.Find(x => x[0] == 'A'); //espera um predicado ou lógica como parametro para encontrar item
-        Console.WriteLine($"Primeiro com a letra 'A': {s1}");
+        Console.WriteLine($"Primeiro com a letra 'A'(Lâmbida): {s2}");
 
         string s3 = list.FindLast(x => x[0] == 'A'); //retorna ultimo item de acordo com a lógica
-        Console.WriteLine($"Último com a letra 'A': {s1}");
+        Console.WriteLine($"Último com a letra 'A': {s3}");
+
+        int pos1 = list.FindIndex(x => x[0] == 'A'); //retorna indice/posição do item de acordo com a lógica
+        Console.WriteLine($"Primeira posição com a letra 'A': {pos1}");
+        
+        int pos2 = list.FindLastIndex(x => x[0] == 'A'); //retorna ultimo indice/posição do item de acordo com a lógica
+        Console.WriteLine($"Última posição com a letra 'A': {pos2}");
     }
 
     static bool FirstA(string list)
