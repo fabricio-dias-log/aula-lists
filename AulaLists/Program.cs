@@ -49,7 +49,7 @@ class Program
         }
         
         Console.WriteLine("------------------------------");
-        Console.WriteLine("Lista atualizada");
+        Console.WriteLine("Lista atualizada (Alex Removido)");
         list.Remove("Alex");
         foreach (var obj in list)
         {
@@ -58,7 +58,15 @@ class Program
 
         list.RemoveAll(x => x[0] == 'M'); // remove todos os resultados de acordo com a lógica
         Console.WriteLine("------------------------------");
-        Console.WriteLine("Lista atualizada");
+        Console.WriteLine("Lista atualizada (Sem nomes com letra M)");
+        foreach (var obj in list)
+        {
+            Console.WriteLine(obj);
+        }
+        
+        list.RemoveAt(2); // remove de acordo com o indice passado como parametro
+        Console.WriteLine("------------------------------");
+        Console.WriteLine("Lista atualizada (indice 2 removido)");
         foreach (var obj in list)
         {
             Console.WriteLine(obj);
