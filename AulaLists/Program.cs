@@ -10,6 +10,8 @@ class Program
         list.Add("João");
         list.Add("Linux");
         list.Add("Windows");
+        
+        list.Insert(2, "Ana"); // insere o item de acordo com a posição 
 
         foreach (var obj in list)
         {
